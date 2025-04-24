@@ -1,22 +1,27 @@
 import random
 
-def hillClimbing(f, x, y, h=0.01):
+def hillClimbing(f, x, y, z, h=0.01):
     while (True):
-        fxy = f(x, y)
-        print('x={0:.3f} y={1:.3f} f(x,y)={2:.3f}'.format(x, y, fxy))
-        if f(x+h, y) >= fxy:
+        fxyz = f(x, y, z)
+        print('x={0:.3f} y={1:.3f} z={2:.3f} f(x,y,z)={3:.3f}'.format(x, y, z, fxyz))
+        if f(x+h, y, z) >= fxyz:
             x = x + h
-        elif f(x-h, y) >= fxy:
+        elif f(x-h, y, z) >= fxyz:
             x = x - h
-        elif f(x, y+h) >= fxy:
+        elif f(x, y+h, z) >= fxyz:
             y = y + h
-        elif f(x, y-h) >= fxy:
+        elif f(x, y-h, z) >= fxyz:
             y = y - h
+        elif f(x, y, z+h) >= fxyz:
+            z = z + h
+        elif f(x, y, z-h) >= fxyz:
+            z = z - h
         else:
             break
-    return (x,y,fxy)
+    return (x,y,z,fxyz)
 
-def f(x, y):
-    return -1 * ( x*x - 2*x + y*y + 2*y - 8 )
+def f(x, y, z):
+    # return -1 * ( x*x - 2*x + y*y + 2*y - 8 )
+    return -1 * (x**2 + y**2 + z**2 - 2*x - 4*y - 6*z + 8)
 
-hillClimbing(f, 0, 0)
+hillClimbing(f, 0, 0, 0)
