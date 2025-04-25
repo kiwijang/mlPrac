@@ -19,3 +19,10 @@ https://github.com/ccc113b/_ml/issues
 
 - 課程影片來自直播:
 https://www.youtube.com/live/wrtBOpObPFc?si=aU7-rZ4FaJSweKn3
+
+# naomi 作業 commit 紀錄
+- 習題 1 - 請用爬山演算法求 f = x^2 + y^2 + z^2 - 2x - 4y - 6z + 8 的最低點:
+https://github.com/kiwijang/mlPrac/commit/252f3ef23fa6754b344d9d638e593c2a481e8250
+
+- 習題 2 -- 請用爬山演算法求解旅行推銷員問題:
+https://github.com/kiwijang/mlPrac/commit/69b52b7ff008e3ab9744aee95cbc2daf39ea4d10
